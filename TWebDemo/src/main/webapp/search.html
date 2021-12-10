@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  	<title>web Demo</title>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="mystyle.css">
+
+
+</head>
+
+<body>
+
+<!-- Header -->
+<div class="header">
+  <h1>Inventory Management Database System</h1>
+  <p>Latest in Java technologies</p>
+</div>
+
+<!-- Navigation Bar -->
+<ul>
+     <li><a href="home.html">Home</a></li>
+		<li><a href="addlaptop.jsp">Add Laptop</a></li>
+		<!-- <li> <a href="listall">List all Laptops</a> 	</li>  -->
+		
+		<li class="dropdown">
+		    <a href="javascript:void(0)" class="dropbtn">List Laptops</a>
+		    <div class="dropdown-content">
+		      <a href="listall">List All Laptops on hand</a>
+		      <a href="listmodeltype">List by Model Type</a>
+		      
+		    </div>
+		  </li>
+		<li class="dropdown"> 
+			<a href="javascript:void(0)" class="dropbtn">Search Laptops</a>
+			 <div class="dropdown-content">
+				<a href="search.html">Search Laptop</a>
+				<a href="search.html">Search by Serial</a>
+				<a href="search.html">Search by Model</a>
+			</div>
+		</li>
+		<li><a href="memo">Memo</a></li>
+		<li><a href="login.jsp">Login</a></li>
+		<li style="float:right"><a href="about.html" >About</a></li>
+    </ul>
+    
+
+<div class="row">
+
+	<div class="column side">
+		<h2>Quick Links</h2>
+		<a href="https://ark.intel.com/content/www/us/en/ark.html">Intel Ark</a>
+		<br>
+		<a href="https://ark.intel.com/content/www/us/en/ark.html">IT Device Market PC Catalog</a>
+		<br>
+		<a href="https://it.intel.com/#/">TAC</a>
+	</div>
+
+	<div class="column middle">
+		<div class="card">
+			<h2>Inventory Management Database System</h2>
+			<h5>A database system to manage inventory using Java, J2EE, MySQL, Apache Tomcat</h5>
+			<p>Search in the inventory</p>
+			
+			<div class="formbox">
+				<form action="searchlaptop" method="post">
+					<label for="laptopserial">Laptop Serial#</label>
+					<input type="text" id="laptopserial" name="laptopserial" placeholder="Serial number...">
+
+					<label for="model">Model</label>
+					<input type="text" id="model" name="model" placeholder="Model...">
+					
+					<label for="notes">Notes</label>
+					<input type="text" id="notes" name="notes" placeholder="Notes...">
+					
+					<label for="username">User</label>
+					<input type="text" id="username" name="username" placeholder="User name...">
+
+					<label for="manufacture">Manufacture</label>
+					<select id="manufacture" name="manufacture">
+					  <option value="hp">HP</option>
+					  <option value="lenovo">Lenovo</option>
+					  <option value="dell">Dell</option>
+					</select>
+				  
+				  	<!--  give a user an option on how to search by serial, model, or notes or manufacture -->
+				  	<input type="checkbox" id="serial" name="serialcheck" value="serialcheck" >
+				  	<label for="serial"> Search by Serial</label><br>
+				  	
+				  	<input type="checkbox" id="modelcheck" name="modelcheck" value="modelcheck" >
+				  	<label for="modelcheck"> Search by Model</label><br>
+				  	
+				  	<input type="checkbox" id="notescheck" name="notescheck" value="notescheck" >
+				  	<label for="notescheck"> Search by Notes</label><br>
+				  	
+				  	<input type="checkbox" id="usercheck" name="usercheck" value="usercheck" >
+				  	<label for="usercheck"> Search by User name</label><br>
+				  	
+					<input type="submit" value="Submit">
+				  </form>
+			  </div>
+		</div>	
+	</div>
+	<!--
+	<div class="column side">
+		<h2>Right side column</h2>
+		<p>some bllah blah text, latin, ip address</p>
+	</div> -->
+	
+</div>
+
+</body>
+
+</html>
